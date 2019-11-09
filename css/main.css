@@ -246,6 +246,7 @@ h3 {
   margin: 25px 0 0 0;
   line-height: 24px;
   font-size: 14px;
+  color: #898f8f;
 }
 
 .slider__line2 {
@@ -281,6 +282,7 @@ h3 {
   border: 1px solid #ffcc00;
   padding: 6px 11px;
   cursor: pointer;
+  color: #898f8f;
 }
 
 .button:hover {

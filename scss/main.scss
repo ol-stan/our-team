@@ -179,6 +179,7 @@ h3 {
     margin: 25px 0 0 0;
     line-height: 24px;
     font-size: 14px;
+    color: $colorSecondary;
 }
 
 .slider__line2 {
@@ -214,6 +215,7 @@ h3 {
     border: 1px solid $colorBase;
     padding: 6px 11px;
     cursor: pointer;
+    color: $colorSecondary;
 
     &:hover {
         background-color: $colorBase;
