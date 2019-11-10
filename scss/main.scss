@@ -2,43 +2,47 @@
 @import 'reset';
 @import 'mixins';
 
+%mp_for_slider {
+    margin: 80px;
+}
+
 .header {
     text-align: center;
     padding: 110px 0 0 0;
     color: $colorSecondary;
     font-size: 18px;
-}
 
-.header__line {
-    margin: 0 auto;
-    max-width: 450px;
-    overflow: hidden;
-    padding: 0 10px;
-}
-
-.header__line-img {
-    position: relative;
-    display: block;
-    margin: 0 auto;
-
-
-    &:before {
-        content: '';
-        width: 47%;
-        position: absolute;
-        border-bottom: 1px solid $colorBase;
-        top: 50%;
-        right: 0px;
-
+    &__line {
+        margin: 0 auto;
+        max-width: 450px;
+        overflow: hidden;
+        padding: 0 10px;
     }
 
-    &::after {
-        content: '';
-        width: 47%;
-        position: absolute;
-        border-bottom: 1px solid $colorBase;
-        top: 50%;
-        left: 0px;
+    &__line-img {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+
+
+        &:before {
+            content: '';
+            width: 47%;
+            position: absolute;
+            border-bottom: 1px solid $colorBase;
+            top: 50%;
+            right: 0px;
+
+        }
+
+        &::after {
+            content: '';
+            width: 47%;
+            position: absolute;
+            border-bottom: 1px solid $colorBase;
+            top: 50%;
+            left: 0px;
+        }
     }
 }
 
@@ -56,8 +60,48 @@
         border-left: 1px solid $colorBase;
         height: 100%;
     }
-}
 
+    &__line {
+        border-bottom: 1px solid $colorBase;
+        margin: 25px auto;
+        width: 25%;
+    }
+
+    &__line2 {
+        border-bottom: 4px solid $colorBase;
+        margin: 20px auto 0;
+        width: 20px;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            border-bottom: 4px solid $colorBase;
+            width: 10px;
+            right: 25px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            border-bottom: 4px solid $colorBase;
+            width: 10px;
+            left: 25px;
+        }
+    }
+
+    &__photo {
+        @extend %mp_for_slider;
+        position: relative;
+        width: 50%;
+    }
+
+    &__content {
+        @extend %mp_for_slider;
+        text-align: center;
+        width: 50%;
+    }
+}
 
 .slider-arrow {
     cursor: pointer;
@@ -89,24 +133,6 @@
     }
 }
 
-%mp_for_slider {
-    margin: 80px;
-
-}
-
-.slider__line {
-    border-bottom: 1px solid $colorBase;
-    margin: 25px auto;
-    width: 25%;
-}
-
-
-.slider__photo {
-    @extend %mp_for_slider;
-    position: relative;
-    width: 50%;
-}
-
 .border-photo {
     position: absolute;
 
@@ -122,12 +148,6 @@
     max-width: 100%;
     border: solid 1px $colorBase;
     box-sizing: border-box;
-}
-
-.slider__content {
-    @extend %mp_for_slider;
-    text-align: center;
-    width: 50%;
 }
 
 h2 {
@@ -146,29 +166,27 @@ h3 {
     align-items: center;
     justify-content: center;
     margin: 25px auto 0;
-}
 
-.social-block__icon {
-    width: 30px;
-    height: 30px;
-    color: #cccccc;
-    font-size: 14px;
-    border: 1px solid #cccccc;
-    border-radius: 50%;
+    &__icon {
+        width: 30px;
+        height: 30px;
+        color: #cccccc;
+        font-size: 14px;
+        border: 1px solid #cccccc;
+        border-radius: 50%;
 
-    &:nth-child(odd) {
-        margin: 0 5px;
+        &:nth-child(odd) {
+            margin: 0 5px;
+        }
+
+        &:hover {
+            color: $colorBase;
+            border-color: $colorBase;
+            cursor: pointer;
+            transform: scale(1.2);
+            transition: .3s;
+        }
     }
-
-    &:hover {
-        color: $colorBase;
-        border-color: $colorBase;
-        cursor: pointer;
-        transform: scale(1.2);
-        transition: .3s;
-    }
-
-
 }
 
 .fab {
@@ -180,29 +198,6 @@ h3 {
     line-height: 24px;
     font-size: 14px;
     color: $colorSecondary;
-}
-
-.slider__line2 {
-    border-bottom: 4px solid $colorBase;
-    margin: 20px auto 0;
-    width: 20px;
-    position: relative;
-
-    &:before {
-        content: '';
-        position: absolute;
-        border-bottom: 4px solid $colorBase;
-        width: 10px;
-        right: 25px;
-    }
-
-    &:after {
-        content: '';
-        position: absolute;
-        border-bottom: 4px solid $colorBase;
-        width: 10px;
-        left: 25px;
-    }
 }
 
 .button {
